@@ -1,0 +1,103 @@
+body {
+  background: #333;
+  padding: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+input {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 15px;
+  background: #222;
+  box-shadow: rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0px inset;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+
+button {
+  border: none;
+  background: #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: rgba(255,255,255,0.1) 0 1px 2px 1px inset,rgba(255,255,255,0.2) 0 1px inset,rgba(0,0,0,0.4) 0 -1px 1px inset,rgba(0,0,0,0.4) 0 1px 1px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #ddd;
+}
+
+button:focus, button:active {
+  outline: 0;
+}
+
+button:active, .tile.green:active {
+  box-shadow: rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0px inset;
+}
+
+#args {
+  width: 564px;
+  margin: 20px auto 0 auto;
+}
+
+.blue, #blues {
+  background-color: #3c78d8;
+}
+
+.green, #greens  {
+  background-color: #6aa84f;
+}
+
+.red, #reds {
+  background-color: #e06666;
+}
+
+.tile {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 4px;
+}
+
+.tile.green {
+  cursor: pointer;
+  box-shadow: rgba(255,255,255,0.1) 0 1px 2px 1px inset,rgba(255,255,255,0.2) 0 2px inset,rgba(0,0,0,0.4) 0 -2px 2px inset,rgba(0,0,0,0.4) 1px 1px 1px;
+  border: #333;
+  height: 64px;
+  width: 64px;
+}
+
+.tile.green:hover {
+  background-color: #79b45f;
+}
+
+h1 {
+  color: white;
+  display: inline-block;
+  padding: 5px 25px;
+  font-family: Menlo, monospace;
+  border-radius: 4px;
+  box-shadow: rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0px inset;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  #args {
+    margin: none;
+    width: auto;
+  }
+
+  button, input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2px auto;
+  }
+}

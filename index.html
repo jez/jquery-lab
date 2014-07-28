@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hone your skills! Beat Voldemort!">
+    <!-- For mobile responsive behaviors -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Using a CSS reset like normalize.css is usually a good idea -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" type="text/css">
+    <!-- This is what loads the CSS we have written -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Galumphing Banderwoozles</title>
+  </head>
+  <body>
+    <!-- For gathering the arguments about board size from the user. -->
+    <form id="args">
+      <input id="rows" name="rows" placeholder="Number of rows?">
+      <input id="cols" name="cols" placeholder="Number of cols?">
+      <button id="submit">Play!</button>
+    </form>
+    <!-- Show some numbers relating to the current board state. -->
+    <div class="center">
+      <h1 id="reds" class="red">0</h1>
+      <h1 id="greens" class="green">0</h1>
+      <h1 id="blues" class="blue">0</h1>
+    </div>
+    <!-- Our actual board. Empty at first, then updated after the game starts. -->
+    <div class="center">
+      <div id="tile-wrapper"></div>
+    </div>
+    <!-- Paste Google jQuery snippet here! -->
+    
+    <!-- Loading JavaScript libraries should normally be done at the end of the
+         <body> tag. That way, loading the JavaScript doesn't "block" your page
+         from loading, but instead both can load at the same time. -->
+    
+  </body>
+</html>

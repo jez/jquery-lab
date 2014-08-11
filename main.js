@@ -3,6 +3,7 @@
     var cols;
 
     function play(e) {
+      e.preventDefault();
       rows = $('#rows').val();
       cols = $('#cols').val();
 

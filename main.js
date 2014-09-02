@@ -52,7 +52,30 @@
         // Loop over each element in the $neighbors list
         // Note how this is done with a callback that takes 3 arguments
         $neighbors.forEach(function($neighbor, i, array) {
+          // Make sure the neighbor actually exists
+          if($neighbor.tile) {
+            var neighbor_color = boardColors[$neighbor.row][$neighbor.col];
 
+            if(neighbor_color === 'green') {
+              // Green flips to blue
+              setColor($neighbor.row, $neighbor.col, 'blue');
+
+              // Update totals
+              if(greens > 0) { 
+                greens--; 
+              }
+              blues++;
+            } else if(neighbor_color === 'blue') {
+              // Blue flips to green
+              setColor($neighbor.row, $neighbor.col, 'green');
+
+              // Update totals
+              if (blues > 0 ) { 
+                blues--; 
+              }
+              greens++;
+            }
+          }
         }); // end of loop
     }
 

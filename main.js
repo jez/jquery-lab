@@ -26,6 +26,20 @@
                        .addClass(color);
     }
 
+    function move(e, r, c) {
+      // Grab the stored color
+      var color = boardColors[r][c];
+
+      // We can only click the green tiles, else do nothing
+      if(color == 'green') {
+        // Clicked tiles turn red
+        setColor(r, c, 'red');
+
+        // Update totals
+        reds++;
+        greens--;
+    }
+
     function play(e) {
       e.preventDefault();
       rows = $('#rows').val();

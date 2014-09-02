@@ -38,6 +38,16 @@
         // Update totals
         reds++;
         greens--;
+
+        // Find the neighbors, checking for valid rows and cols
+        var $up = (r > 0) ? getTile(r - 1, c) : null; 
+        var $down = (r < rows - 1) ? getTile(r + 1, c) : null;
+        var $left = (c > 0) ? getTile(r, c - 1) : null;
+        var $right = (c < cols - 1) ? getTile(r, c + 1) : null;
+        var $neighbors = [{tile: $up,    row: r - 1, col: c}, 
+                          {tile: $down,  row: r + 1, col: c}, 
+                          {tile: $left,  row: r,     col: c - 1}, 
+                          {tile: $right, row: r,     col: c + 1}];
     }
 
     function play(e) {

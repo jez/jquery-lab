@@ -48,6 +48,12 @@
                           {tile: $down,  row: r + 1, col: c}, 
                           {tile: $left,  row: r,     col: c - 1}, 
                           {tile: $right, row: r,     col: c + 1}];
+
+        // Loop over each element in the $neighbors list
+        // Note how this is done with a callback that takes 3 arguments
+        $neighbors.forEach(function($neighbor, i, array) {
+
+        }); // end of loop
     }
 
     function play(e) {

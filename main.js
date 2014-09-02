@@ -77,6 +77,28 @@
             }
           }
         }); // end of loop
+
+        // Update the displayed totals so the user can see
+        $('#reds').html(reds);
+        $('#blues').html(blues);
+        $('#greens').html(greens);
+
+        // Check winning or losing conditions
+        if(reds == total) {
+          alert("Hooray! You're such a champ. Keep it up.");
+
+          // Refresh the page so that people can play again
+          location.reload();
+        } else if(greens == 0) {
+          // Yes, I know that some boards are winnable and some boards aren't
+          // Yes I chose to tell them that losing boards are winnable
+          // Yes you can choose a different message if you'd like
+          alert("You're pretty bad at this game. This board was winnable.");
+
+          // Refresh the page so that people can play again
+          location.reload();
+        }
+      }
     }
 
     function play(e) {

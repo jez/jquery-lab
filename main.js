@@ -10,6 +10,22 @@
 
     var total;
 
+    // Helper function to get row
+    function getTile(row, col) {
+      return $('.tile-row:nth(' + row + ') > .tile:nth(' + col + ')');
+    }
+
+    function setColor(row, col, color) {
+      // Update our representation of the tile's color
+      boardColors[row][col] = color;
+
+      // Change the page's representation
+      getTile(row, col).removeClass('red')
+                       .removeClass('green')
+                       .removeClass('blue')
+                       .addClass(color);
+    }
+
     function play(e) {
       e.preventDefault();
       rows = $('#rows').val();
